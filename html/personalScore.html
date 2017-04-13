@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<title>后台管理</title>
+	<link rel="stylesheet" type="text/css" href="../css/admin.css">
+	<link rel="Shortcut Icon"  href="../favicon.ico">
+</head>
+<!-- **********************************body*********************************** -->
+<body>
+	<div class="content">
+		<div class="header">
+			<h4 class="title">秦皇岛市公安机关督察记分管理信息系统</h4>
+			<img src="../images/admin.png" class="adminImg">
+			<div>
+				<p><a href="javascript:void(0);">马里奥大叔</a><a href="">退出</a></p>
+				<p><span>部门：</span><a href="">警务督察支队</a><span>身份：</span><a href="">系统管理员</a></p>
+			</div>
+		</div>
+		<div class="clearfix">
+			<div class="nav">
+				<div class="mask"></div>
+				<ul>
+					<li>
+						<a href="javascript:void(0);" style="background: #ffffff;color: #000000;font-weight: bold;"><img src="../images/record.png">记分记录</a>
+						<ul style="display: block;">
+							<li><a href="companyScore.html">单位记分</a></li>
+							<li><a href="personalScore.html">人员记分</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="../images/company.png">机构管理</a>
+						<ul>
+							<li><a href="cityMechanism.html">市局机构管理</a></li>
+							<li><a href="coutyMechanism.html">县区局机构管理</a></li>
+							<li><a href="register.html">注册登录管理</a></li>
+						</ul>				
+					</li>
+					<li>		
+						<a href="javascript:void(0);"><img src="../images/person.png">人员管理</a>
+						<ul>
+							<li><a href="personalData.html">人员资料</a></li>
+							<li><a href="personalTransfer.html">人员调动</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="../images/score.png">记分管理</a>
+						<ul>
+							<li><a href="dailyManage.html">日常督察记分管理</a></li>
+							<li><a href="majorManage.html">重大安保督察记分</a></li>
+						</ul>
+					</li>	
+					<li>		
+						<a href="javascript:void(0);"><img src="../images/seach.png">查询统计</a>
+						<ul>
+							<li><a href="scoreStat.html">记分统计</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="../images/summer.png">暑期记分</a>
+						<ul>
+							<li><a href="groupSetting.html">组别设置</a></li>
+							<li><a href="scoreAssessment.html">记分考核</a></li>
+							<li><a href="seachStat.html">查询统计</a></li>
+						</ul>
+					</li>
+					<li>		
+						<a href="javascript:void(0);"><img src="../images/score.png">记分设置</a>
+						<ul>
+							<li><a href="scoreInput.html">记分项目录入</a></li>
+							<li><a href="scoreManage.html">分值管理</a></li>
+							<li><a href="evidence.html">证据查看</a></li>
+							<li><a href="clue.html">线索来源</a></li>
+							<li><a href="reset.html">记分重置</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="form">
+				<h3>条件列表</h3>
+			<!-- 表单信息************************************************* -->
+				<div class="msg">
+					<span class="person">按个人信息查询：</span>
+					<span>姓名：</span><input type="text" placeholder="请输入姓名">
+					<span>警号：</span><input type="text" placeholder="请输入警号">
+					<span>身份证号码：</span><input type="text" placeholder="请输入身份证">
+					<span>单位：</span><input type="text" placeholder="请输入单位">
+					<span>部门：</span>
+					<select name="department" id="department">
+						<option >所有部门</option>
+						<option value="0">具</option>
+						<option value="1">体</option>
+						<option value="2">不</option>
+						<option value="3">知</option>
+						<option value="4">道</option>
+					</select>
+				</div>
+				<div class="msg">
+					<span class="time">按时间查询：</span><input type="text" class="sang_Calender" placeholder="请选择日期"/>至<input type="text" class="sang_Calender" placeholder="请选择日期"/>
+					<a href="javascript:void(0);">查找</a>
+					<span>&nbsp&nbsp&nbsp&nbsp( 数据按照记分时间顺序查询 )</span>
+				</div>
+			<!-- 表单信息************************************************* -->
+				<h3>数据列表</h3>
+				<div class="table">
+					<table  cellspacing="0">
+						<tr> 
+							<th>姓名</th> 
+							<th>警号</th> 
+							<th>身份证号码</th>
+							<th>单位</th>
+							<th>部门</th>
+							<th>总分</th>
+							<th>时间</th>
+							<th>记分</th>
+							<th>记分原因</th>
+							<th>详情</th>
+							<th>证据</th>
+						</tr>
+						<tr style="background: #F3A356"> 
+							<td>王**</td>
+							<td>123456</td>
+							<td>1234**********4567</td>
+							<td>公安局**分局</td>
+							<td>督察部</td>
+							<td>90</td>
+							<td>2017.3.27</td>
+							<td>10</td>
+							<td>(一)违反警容风纪方面规定************</td>
+							<td>警容不整</td>
+							<td><a href="javascript:void(0);" class="evidence">查看</a></td>
+						</tr>
+						<tr style="background: #5CD570"> 
+							<td>王**</td>
+							<td>123456</td>
+							<td>1234**********4567</td>
+							<td>公安局**分局</td>
+							<td>督察部</td>
+							<td>100</td>
+							<td>2017.3</td>
+							<td>0</td>
+							<td>无</td>
+							<td>无</td>
+							<td>无</td>
+						</tr>
+						<tr  style="background: #F3E95D"> 
+							<td>王**</td>
+							<td>123456</td>
+							<td>1234**********4567</td>
+							<td>公安局**分局</td>
+							<td>督察部</td>
+							<td>96</td>
+							<td>2017.3</td>
+							<td>4</td>
+							<td>(一)违反警容风纪方面规定************</td>
+							<td>警容不整</td>
+							<td><a href="javascript:void(0);" class="evidence">查看</a></td>
+						</tr>
+						<tr style="background: #F06766">
+							<td>王**</td>
+							<td>123456</td>
+							<td>1234**********4567</td>
+							<td>公安局**分局</td>
+							<td>督察部</td>
+							<td>80</td>
+							<td>2017.3</td>
+							<td>20</td>
+							<td>(一)违反警容风纪方面规定************</td>
+							<td>警容不整</td>
+							<td><a href="javascript:void(0);" class="evidence">查看</a></td>
+						</tr>
+					</table>
+				</div>
+				<!-- 上下页************************************************* -->
+				<div class="npBtn">
+					<div>
+						<a href="" id="firstPage">首页</a>
+						<a href="" id="prev">&lt</a><a href="" id="next">&gt</a>
+						<a href="" id="lastPage">尾页</a>
+						第<input type="text" placeholder="2">页
+						<span id="count">共120页</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<span>@技术支持：秦皇岛锐基网络工程有限公司</span>
+	</div>
+	</div>
+	<script type="text/javascript" src="../lib/jquery.min.js"></script>
+	<script type="text/javascript" src="../lib/datetime.js"></script>
+	<script type="text/javascript" src="../js/tab.js"></script>
+</body>
+</html>
